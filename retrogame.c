@@ -653,6 +653,7 @@ static void pinConfigLoad() {
 			   pinSetup(i, "edge",
 			    (mcpMask & (1<<i)) ? "falling" : "both")) {
 				err("Pin config failed");
+				err("Cannot config pin%i");
 			}
 			// Get initial pin value.  This is for plain GPIOs
 			// only; MCP23017 will be a separate pass later.
